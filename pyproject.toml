@@ -1,0 +1,32 @@
+[project]
+name = "time-series-library"
+version = "0.1.0"
+description = "Time Series Forecasting Library with TINA model"
+requires-python = ">=3.13"
+
+dependencies = [
+    "torch>=2.10.0",
+    "torchvision>=0.25.0",
+    "numpy>=2.3.0",
+    "pandas>=2.3.0",
+    "scipy>=1.16.0",
+    "scikit-learn>=1.7.2",
+    "matplotlib>=3.10.0",
+    "optuna>=4.5.0",
+    "einops>=0.8.0",
+    "PyWavelets>=1.8.0",
+    "sktime>=0.40.0",
+    "scikit-base>=0.13.0",
+    "sympy>=1.13.0",
+    "reformer-pytorch>=1.4.4",
+    "tqdm>=4.60.0",
+    "patool>=4.0.0",
+    "PyYAML>=6.0.0",
+]
+
+[project.optional-dependencies]
+mamba = ["mamba-ssm"]
+cuda = ["ninja>=1.11.0"]
+
+[tool.pip]
+extra-index-url = ["https://download.pytorch.org/whl/cu130"]
